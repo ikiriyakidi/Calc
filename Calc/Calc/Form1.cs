@@ -15,6 +15,7 @@ namespace Calc
         float a, b;
         int count;
         bool znak = true;
+        
         public Form1()
         {
             InitializeComponent();
