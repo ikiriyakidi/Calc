@@ -113,6 +113,10 @@ namespace Calc
                 {
                     textBox1.Text += "0,";
                 }
+                else
+                {
+                    textBox1.Text += ",";
+                }
             }
         }
 
@@ -183,12 +187,11 @@ namespace Calc
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == ',')
-{
-                if (textBox1.Text.IndexOf(',') != -1)
-                {
-                    e.Handled = true;
-                }
+            char number = e.KeyChar;
+
+            if (!Char.IsDigit(number))
+            {
+                e.Handled = true;
             }
         }
 
